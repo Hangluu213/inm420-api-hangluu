@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Link to the CSS file -->
+    <link rel="stylesheet" href="assets/css/style.css">
+    <title>INM 420 Rest API</title>
+</head>
+<body>
+    <!-- Search bar -->
+    <header class="top-bar">
+        <input  id="search-location" class="search-location" placeholder="Search for your preffered city...">
+        <button class="location-btn">Search</button>
+    </header>
+    
+    <!-- Main container -->
+    <main class="container">
+
+        <!-- Time card section: displays city name, current time, and date -->
+        <section class="time-card">
+            <h2 id="city-name">--</h2>
+            <h1 id="time">--:--</h1>
+            <p id="date">--, -- ---</p>
+        </section>
+
+        <!-- Current weather card section: displays current temperature, feels like temperature, sunrise, and sunset times and others details -->
+        <section class="current-weather-card">
+            <div class="main-details">
+                <h1 id="temperature">--°C</h1>
+                <div class="feels-like">
+                    <div class="feels-like2">Feels like:</div>
+                    <span id="feels-like">--°C</span>
+                </div>
+                <div class="sunrise">
+                    <img class="sunrise-white-1" src="assets/images/icons8-sunrise-64.png" />
+                    <div class="text-time2">
+                        <div class="sunrise2">Sunrise</div>
+                        <span id="sunrise">--:--</span>
+                    </div>
+                </div>
+                <div class="sunset">
+                    <img class="sunset-white-1" src="assets/images/icons8-sunset-48.png" />  
+                    <div class="text-time">
+                        <div class="sunset2">Sunset</div>
+                        <span id="sunset">--:--</span>
+                    </div>
+    
+                </div>
+            </div>
+            <div class="middle-details">
+                <img id="weather-icon" src="" alt="Weather icon">
+                <p id="weather-description">--</p>
+            </div>
+            
+            <!-- Additional weather details: UV Index, Pressure, Wind Speed, and Humidity -->
+            <div class="extra-details">
+                <div class="text-time">
+                    <img class="uv-white-1" src="assets/images/uv-white 1.svg" />
+                    <div class="uv">
+                        <span id="uv">--</span>
+                    </div>
+                    <div>UV</div>
+                </div>
+
+                <div class="text-time">
+                    <img class="pressure-white-1" src="assets/images/pressure-white 1.svg" />
+                    <div class="hpa">
+                        <span id="pressure">--hPa</span>
+                    </div>
+                    <div class="pressure2">Pressure</div>
+                </div>
+
+                <div class="text-time2">
+                    <img class="wind-1" src="assets/images/wind 1.svg" />
+                    <div class="kmh">
+                        <span id="wind-speed">--km/h</span>
+                    </div>
+                    <div class="wind-speed2">Wind Speed</div>
+                </div>
+
+                <div class="text-time2">
+                    <img class="humidity-1" src="assets/images/humidity 1.svg" />
+                    <div class="humidity">
+                        <span id="humidity">--%</span>
+                    </div>
+                    <div class="humidity2">Humidity</div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 5 day weather forecast section -->
+        <section class="forecast-card">
+            <h2>5 Days Forecast</h2>
+            <div class="forecast-list" id="five-day-forecast"></div>
+        </section>
+        
+        <!-- Hourly weather forecast section-->
+        <section class="hourly-forecast">
+            <h2>Hourly Forecast</h2>
+            <div class="hourly-forecast-card" id="hourly-forecast"></div>
+        </section>
+    </main>
+    
+    <script src="assets/js/main.js"></script>
+</body>
+</html>
